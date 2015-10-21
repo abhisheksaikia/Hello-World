@@ -1,1 +1,23 @@
-Hello World
+My Jaipur Map
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>My First Map</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:20; padding:50; }
+  #map { position:absolute; top:10; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+<div id='map'></div>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2Fpa2lhLWFiaGlzaGVrOCIsImEiOiJhNTY1ZTBkZDYyMTlmMmRkY2E4OGM3ZTgzYjZkMjgzZSJ9.nwcECTyhbPI2gpOWXXvDAw#13/26.9114/75.8026';
+var map = L.mapbox.map('map', 'saikia-abhishek8.faab7c99')
+    .setView([26.95, 75.8], 12);
+</script>
+</body>
+</html>
