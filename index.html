@@ -17,12 +17,9 @@
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2Fpa2lhLWFiaGlzaGVrOCIsImEiOiJhNTY1ZTBkZDYyMTlmMmRkY2E4OGM3ZTgzYjZkMjgzZSJ9.nwcECTyhbPI2gpOWXXvDAw';
-L.mapbox.map('map', 'saikia-abhishek8.faab7c99')
-    .addControl(L.mapbox.geocoderControl('mapbox.places'));
+L.mapbox.map('map', 'saikia-abhishek8.faab7c99'));
 var map = L.mapbox.map('map', 'saikia-abhishek8.faab7c99')
     .setView([26.9, 75.8], 12);
-var myLayer= L.mapbox.featureLayer().setGeoJSON(jaipur).addTo(map)
-myLayer.setGeoJSON(jaipur);
 var hash = L.hash(map);
 </script>
 </body>
