@@ -21,6 +21,7 @@ L.mapbox.map('map', 'saikia-abhishek8.faab7c99')
     .addControl(L.mapbox.geocoderControl('mapbox.places'))
 var map = L.mapbox.map('map', 'saikia-abhishek8.faab7c99')
     .setView([26.9, 75.8], 12);
+var myLayer = L.mapbox.featureLayer().addTo(map);
 var geojson = [
   {
   "type": "FeatureCollection",
@@ -508,8 +509,14 @@ var geojson = [
 }
 ]
 var hash = L.hash(map);
-L.mapbox.map('map', 'saikia-abhishek8.faab7c99')
-  .featureLayer.setGeoJSON(geojson);
+L.mapbox.map('map', 'saikia-abhishek8.faab7c99');
+  myLayer.setGeoJSON(geojson);
+  myLayer.on('mouseover', function(e) {
+      e.layer.openPopup();
+  });
+  myLayer.on('mouseout', function(e) {
+      e.layer.closePopup();
+  });
 </script>
 </body>
 </html>
