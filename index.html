@@ -981,11 +981,11 @@ var map = L.mapbox.map('map', 'saikia-abhishek8.faab7c99')
     var hash = L.hash(map);
       var myLayer= L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map);
       myLayer.on('mouseover', function(e) {
-    e.layer.openPopup();
-});
-myLayer.on('mouseout', function(e) {
-    e.layer.closePopup();
-  });
+      e.layer.openPopup();
+      });
+      myLayer.on('mouseout', function(e) {
+      e.layer.closePopup();
+
 </script>
 </body>
 </html>
