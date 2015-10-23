@@ -249,6 +249,9 @@ var geojson = [
         "@id": "node/2694201032",
         "name": "Kartarpura",
         "place": "neighbourhood"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -265,6 +268,9 @@ var geojson = [
         "@id": "node/2694201045",
         "name": "Govindpuri",
         "place": "neighbourhood"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -281,6 +287,9 @@ var geojson = [
         "@id": "node/2694201085",
         "name": "Hatwara",
         "place": "neighbourhood"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -297,6 +306,9 @@ var geojson = [
         "@id": "node/2694368991",
         "name": "Govind Nagar",
         "place": "neighbourhood"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -313,6 +325,9 @@ var geojson = [
         "@id": "node/2694369032",
         "name": "Choudary Colony",
         "place": "neighbourhood"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -329,6 +344,9 @@ var geojson = [
         "@id": "node/2694369038",
         "name": "Deewan Colony",
         "place": "neighbourhood"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -345,6 +363,9 @@ var geojson = [
         "@id": "node/2694374452",
         "name": "Transport Nagar",
         "place": "neighbourhood"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -361,6 +382,9 @@ var geojson = [
         "@id": "node/2694374453",
         "name": "Sindhi Colony",
         "place": "neighbourhood"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -377,6 +401,9 @@ var geojson = [
         "@id": "node/2694374455",
         "name": "Hida Ki Mori",
         "place": "neighbourhood"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -393,6 +420,9 @@ var geojson = [
         "@id": "node/2694374456",
         "name": "Burmese Colony",
         "place": "neighbourhood"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -409,6 +439,9 @@ var geojson = [
         "@id": "node/2694374458",
         "name": "Brahmapuri",
         "place": "neighbourhood"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -425,6 +458,9 @@ var geojson = [
         "@id": "node/2694374469",
         "name": "Topkhana Hazuri",
         "place": "neighbourhood"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -441,6 +477,9 @@ var geojson = [
         "@id": "node/2694374470",
         "name": "Sethi Colony",
         "place": "neighbourhood"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -460,6 +499,9 @@ var geojson = [
         "place": "suburb",
         "postal_code": "302004",
         "source": "AND"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -479,6 +521,9 @@ var geojson = [
         "place": "suburb",
         "postal_code": "302015",
         "source": "AND"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -496,6 +541,9 @@ var geojson = [
         "name": "Rambaug",
         "place": "suburb",
         "postal_code": "302005"
+        "marker-color": "#fc4353",
+        "marker-size": "large",
+        "marker-symbol": "monument"
       },
       "geometry": {
         "type": "Point",
@@ -509,14 +557,8 @@ var geojson = [
 }
 ]
 var hash = L.hash(map);
-L.mapbox.map('map', 'saikia-abhishek8.faab7c99');
-  myLayer.setGeoJSON(geojson);
-  myLayer.on('mouseover', function(e) {
-      e.layer.openPopup();
-  });
-  myLayer.on('mouseout', function(e) {
-      e.layer.closePopup();
-  });
+L.mapbox.map('map', 'saikia-abhishek8.faab7c99')
+  .featureLayer.setGeoJSON(geojson);
 </script>
 </body>
 </html>
