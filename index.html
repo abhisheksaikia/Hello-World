@@ -13,6 +13,17 @@
 </head>
 <body>
 <style>
+.legend label,
+.legend span {
+display:block;
+float:left;
+height:15px;
+width:20%;
+text-align:center;
+font-size:9px;
+color:#808080;
+}
+<style>
 #inputs,
 #errors,
 #directions {
@@ -47,7 +58,22 @@ left: 10px;
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.3.0/mapbox.directions.js'></script>
 <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.3.0/mapbox.directions.css' type='text/css' />
-<div id='map'></div>
+<div id='legend' style='display:none;'>
+  <strong>Jaipur Edits</strong>
+  <nav class='legend clearfix'>
+    <span style='background:#F1EEF6;'></span>
+    <span style='background:#BDC9E1;'></span>
+    <span style='background:#74A9CF;'></span>
+    <span style='background:#2B8CBE;'></span>
+    <span style='background:#045A8D;'></span>
+    <label>streets</label>
+    <label>parks</label>
+    <label>water body</label>
+    <label>buildings</label>
+    <label>streams</label>
+    <small>Source: <a href="http://www.openstreetmap.org/node/315734346#map=13/26.9141/75.8180">openstreetmap</a></small>
+</div>
+<div id='map' class='dark'></div>
 <div id='inputs'></div>
 <div id='errors'></div>
 <div id='directions'>
