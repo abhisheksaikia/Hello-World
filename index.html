@@ -1045,6 +1045,14 @@ var geojson = [
 var map = L.mapbox.map('map', 'saikia-abhishek8.faab7c99')
     .setView([26.9, 75.8], 12).addControl(L.mapbox.geocoderControl('mapbox.places'))
     map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+    var layers = {
+      Streets: L.mapbox.tileLayer('mapbox.streets'),
+      Outdoors: L.mapbox.tileLayer('mapbox.outdoors'),
+      Satellite: L.mapbox.tileLayer('mapbox.satellite')
+  };
+
+  layers.Streets.addTo(map);
+  L.control.layers(layers).addTo(map);
     var hash = L.hash(map);
       var myLayer= L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map);
       myLayer.eachLayer(function (layer) {
