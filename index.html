@@ -1045,6 +1045,8 @@ var geojson = [
 var map = L.mapbox.map('map', 'saikia-abhishek8.faab7c99')
     .setView([26.9, 75.8], 12).addControl(L.mapbox.geocoderControl('mapbox.places'))
     map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+var nprTiles = L.mapbox.tileLayer('saikia-abhishek8.faab7c99').addTo(map);
+var nprGrid = L.mapbox.gridLayer('saikia-abhishek8.faab7c99').addTo(map);
     var layers = {
       Streets: L.mapbox.tileLayer('mapbox.streets'),
       Outdoors: L.mapbox.tileLayer('mapbox.outdoors'),
@@ -1088,6 +1090,13 @@ var directionsRoutesControl = L.mapbox.directions.routesControl('routes', direct
 
 var directionsInstructionsControl = L.mapbox.directions.instructionsControl('instructions', directions)
     .addTo(map);
+nprGrid.on('click', function(e) {
+        if (!e.data) return;
+        var popup = L.popup()
+            .setLatLng(e.latLng)
+            .setContent(e.data.name)
+            .openOn(map);
+    });
 </script>
 </body>
 </html>
