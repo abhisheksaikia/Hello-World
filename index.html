@@ -17,8 +17,8 @@
 .legend span {
 display:block;
 float:left;
-height:10px;
-width:10%;
+height:15px;
+width:20%;
 text-align:center;
 font-size:9px;
 color:#808080;
@@ -62,13 +62,16 @@ left: 10px;
 <div id='legend' style='display:none;'>
   <strong>Jaipur Edits</strong>
   <nav class='legend clearfix'>
-    <span style='background:#cb1717;'></span>
-    <span style='background:#169ef2;'></span>
-    <span style='background:#cde;'></span>
+    <span style='background:#F1EEF6;'></span>
+    <span style='background:#BDC9E1;'></span>
+    <span style='background:#74A9CF;'></span>
+    <span style='background:#2B8CBE;'></span>
+    <span style='background:#045A8D;'></span>
     <label>land</label>
     <label>water</label>
-    <label>roads</label>
-
+    <label>road</label>
+    <label>buildings</label>
+    <label>streams</label>
     <small>Source: <a href="http://www.openstreetmap.org/node/315734346#map=13/26.9141/75.8180">openstreetmap</a></small>
 </div>
 <div id='map' class='dark'></div>
@@ -1046,6 +1049,7 @@ var map = L.mapbox.map('map', 'saikia-abhishek8.faab7c99')
       Streets: L.mapbox.tileLayer('mapbox.streets'),
       Outdoors: L.mapbox.tileLayer('mapbox.outdoors'),
       Satellite: L.mapbox.tileLayer('mapbox.satellite')
+      abhishek: L.mapbox.tileLayer('mapbox.saikia-abhishek8.faab7c99')
   };
 
   layers.Streets.addTo(map);
